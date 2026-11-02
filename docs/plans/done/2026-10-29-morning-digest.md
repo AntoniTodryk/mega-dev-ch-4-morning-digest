@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-02
 ---
 
 # Morning digest
@@ -77,3 +78,19 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader: readNight and DigestRow | — | opencode · claude-opus-5.5 · medium | 2026-11-02 |
+| 2 | Digest page: GET /digest/:night | #1 | opencode · claude-opus-5.5 · low | 2026-11-02 |
+| 3 | Digest JSON: GET /api/digest/:night | #1 | opencode · claude-opus-5.5 · low | 2026-11-02 |
+| 4 | Board links each night to its digest with counts | #1 | opencode · claude-opus-5.5 · low | 2026-11-02 |
+| 5 | Route tests for digest page and JSON | #2, #3 | opencode · claude-opus-5.5 · unknown | 2026-11-02 |
+| 6 | Preview for review on GitHub Pages | #2, #3, #4 | opencode · claude-opus-5.5 · medium | 2026-11-02 |
+| 7 | Clean up: remove lane marker from preview, archive plan | #6 | opencode · claude-opus-5.5 · medium | 2026-11-02 |
+
+Preview: https://antonitodryk.github.io/mega-dev-ch-4-morning-digest/ (GitHub Pages, deployed from
+an Actions artifact, never committed). Marker taken off on 2026-11-02: re-deployed with
+`LANE_MARKER` unset, banner reads "no marker set".
